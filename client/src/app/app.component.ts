@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
 import { NavComponent } from './nav/nav.component';
 import { AccountService } from './_services/account.service';
 import { User } from './_models/user';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from './_modules/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    HttpClientModule,
-    CommonModule,
+    SharedModule,
     NavComponent,
     HomeComponent,
   ],
